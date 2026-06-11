@@ -1,0 +1,26 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- IDE ---
+.idea/
+.vscode/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+smart_home_secure_demo/logs/
+
+# Generierte Schlüssel / Zertifikate / Sessions
+smart_home_secure_demo/ca/ca_private_key.pem
+smart_home_secure_demo/ca/ca_public_key.pem
+smart_home_secure_demo/ca/issued_certificates/
+smart_home_secure_demo/hub/session_keys/
+smart_home_secure_demo/hub/trusted_ca_public_key.pem
+smart_home_secure_demo/devices/device_credentials/
+*.pem
