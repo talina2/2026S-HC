@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Home Secure Demo - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Home Secure Demo</h1>
+    <span id="updated" class="updated">verbinde...</span>
+    <a class="nav-link" href="broker.html">&rarr; Broker-Sicht (verschlüsselt)</a>
+  </header>
+
+  <!-- KLIMA: Sensoren + zugehoerige Aktoren (Regelkreise) -->
+  <h2 class="section">Klima</h2>
+  <section class="cards">
+    <div class="card" id="card-temperature">
+      <div class="card-title">Temperatur <span class="tag-sensor">Sensor</span></div>
+      <div class="card-value" id="temperature-value">--</div>
+      <div class="card-sub" id="temperature-sub"></div>
+    </div>
+    <div class="card" id="card-heating">
+      <div class="card-title">Heizung <span class="tag-actor">Aktor</span></div>
+      <div class="card-value" id="heating-value">--</div>
+      <div class="card-sub" id="heating-sub"></div>
+    </div>
+    <div class="card" id="card-humidity">
+      <div class="card-title">Luftfeuchte <span class="tag-sensor">HTTP-Sensor</span></div>
+      <div class="card-value" id="humidity-value">--</div>
+      <div class="card-sub" id="humidity-sub"></div>
+    </div>
+    <div class="card" id="card-ventilation">
+      <div class="card-title">Lüftung <span class="tag-actor">Aktor</span></div>
+      <div class="card-value" id="ventilation-value">--</div>
+      <div class="card-sub" id="ventilation-sub"></div>
+    </div>
+  </section>
+
+  <!-- ANWESENHEIT & LICHT -->
+  <h2 class="section">Anwesenheit &amp; Licht</h2>
+  <section class="cards">
+    <div class="card" id="card-entrance">
+      <div class="card-title">Eingang (Tür) <span class="tag-sensor">Sensor</span></div>
+      <div class="card-value" id="entrance-value">--</div>
+      <div class="card-sub" id="entrance-sub"></div>
+    </div>
+    <div class="card" id="card-motion">
+      <div class="card-title">Bewegung innen <span class="tag-sensor">Sensor</span></div>
+      <div class="card-value" id="motion-value">--</div>
+      <div class="card-sub" id="motion-sub"></div>
+    </div>
+    <div class="card" id="card-presence">
+      <div class="card-title">Anwesenheit <span class="tag-derived">abgeleitet</span></div>
+      <div class="card-value" id="presence-value">--</div>
+      <div class="card-sub" id="presence-sub"></div>
+    </div>
+    <div class="card" id="card-light">
+      <div class="card-title">Licht <span class="tag-actor">Aktor</span></div>
+      <div class="card-value" id="light-value">--</div>
+      <div class="card-sub" id="light-sub"></div>
+    </div>
+  </section>
+
+  <!-- SICHERHEIT & KOMFORT -->
+  <h2 class="section">Sicherheit &amp; Komfort</h2>
+  <section class="cards">
+    <div class="card" id="card-perimeter">
+      <div class="card-title">Bewegung Außen <span class="tag-sensor">Sensor</span></div>
+      <div class="card-value" id="perimeter-value">--</div>
+      <div class="card-sub" id="perimeter-sub"></div>
+    </div>
+    <div class="card" id="card-alarm">
+      <div class="card-title">Alarm <span class="tag-actor">Aktor</span></div>
+      <div class="card-value" id="alarm-value">--</div>
+      <div class="card-sub" id="alarm-sub"></div>
+    </div>
+    <div class="card" id="card-shutter">
+      <div class="card-title">Rollladen <span class="tag-actor">Aktor</span></div>
+      <div class="card-value" id="shutter-value">--</div>
+      <div class="card-sub" id="shutter-sub"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Aufgenommene Geräte</h2>
+    <table id="devices">
+      <thead><tr><th>Gerät</th><th>Status</th><th>Session-Fingerprint</th><th>Onboarding</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>Security Events</h2>
+    <ul id="events" class="events"></ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
