@@ -4,11 +4,13 @@ import json
 import sys
 import uuid
 from typing import Any, Dict, Optional, Tuple
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
 from shared.crypto_utils import (b64_encode, derive_session_key, generate_x25519_private_key, load_public_key,
                                  project_root, public_key_from_b64, session_key_fingerprint, verify_json_signature,
                                  x25519_public_from_b64, x25519_public_to_b64, )
 
-sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from shared.topics import ALLOWED_DEVICE_TYPES
 
